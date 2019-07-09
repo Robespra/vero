@@ -3562,6 +3562,12 @@ Mantis 0048939 et evol à finaliser
   margin-bottom: 2px;
   display: block;
 }
+
+@media screen and (max-width: 700px) {
+  .frame-left .component-menu .nav .tab {   
+      display: inline-block;
+  }
+}
 .frame-left .component-menu .nav .tab a {
   display: block;
 }
