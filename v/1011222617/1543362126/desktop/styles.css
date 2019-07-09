@@ -885,18 +885,16 @@ hr {
   margin-right: 20px;
 }
 /*///////////Frame Content////////////*/.frame-content {
-  display: table;
-  width: 100%;
-  table-layout: fixed;
+      display: flex;
+          flex-wrap: wrap;
 }
-/*-------------Frame Column---------*/.frame-left,
-.frame-right {
-  display: table-cell;
-  vertical-align: top;
-  width: 300px;
-  margin: 0;
-  z-index: 9;
+
+@media screen and (max-width: 700px) {
+  .frame-content  {   
+    flex-direction: column;
+  }
 }
+
 .frame-left .zone-logo,
 .frame-right .zone-logo {
   text-align: center;
@@ -948,6 +946,7 @@ hr {
 .frame-left.millDefault,
 .frame-right.millDefault {
   background-color: #a07f5b;
+  flex: 30%;
 }
 .frame-left.menuFullHeight,
 .frame-right.menuFullHeight {
@@ -969,8 +968,8 @@ hr {
   border-left: 1px #a07f5b solid;
 }
 /*-------------Frame Center---------*/.frame-center {
-  display: flex;
-  flex-flow: column;
+
+      flex: 70%;
   vertical-align: top;
   background-color: #FFFFFF;
   z-index: 8;
